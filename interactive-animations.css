@@ -1,0 +1,78 @@
+        #back-link {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            z-index: 2;
+        }
+
+        /* this is a simple hover trigger that triggers
+            the bird element when hovering over the container
+            via the animation-play-state property which turns
+            the animation off or on 
+        #container:hover #bird{
+            animation-play-state:running;
+        }
+        */
+
+        nav {
+            position: relative;
+            margin: 10px auto 0 auto;
+            text-align: center;
+            width: 50%;
+        }
+
+        #container {
+            position: relative;
+            width: 450px;
+            height: 400px;
+            margin: 20px auto 0 auto;
+            text-align: center;
+            border: 2px solid #000;
+        }
+
+        #bird {
+            position: absolute;
+            top: 70px;
+
+            animation-name: none;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            animation-play-state: paused;
+        }
+
+        #bird.play{
+            animation-play-state:running;
+        }
+
+        #bird.pause{
+            animation-play-state: paused;
+        }
+
+        #bird.horz{
+            animation-name: horizontal;
+        }
+
+        #bird.vert{
+            animation-name: vertical;
+        }        
+
+        @keyframes horizontal {
+            from{
+                left: 0px;
+            }
+            to{
+                left: 250px;
+            }
+        }
+
+        @keyframes vertical {
+            from{
+                top: 0px;
+            }
+            to{
+                top: 250px;
+            }
+        }        
+
+ 

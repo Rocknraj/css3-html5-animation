@@ -1,0 +1,50 @@
+        #back-link {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        #greeting {
+            position: absolute;
+            left: 100px;
+            top: 100px;
+            color: #0000FF;
+            font-size: 50px;
+            margin: 0;
+            padding: 10px;
+            border: 2px solid black;
+
+            /* For shorthand, this is the order:
+
+            transition-property: font-size;
+            transition-duration: 1s;
+            transition-timing-function: ease;
+            transition-delay: 250ms;
+
+            in shorthand, properties transitioning can be comma separated
+            at the end of their transtion attributes
+
+            transition: font-size 1s ease 250ms,
+                        color;
+            */
+
+            transition: font-size 1s ease 250ms,
+                        color;
+        }
+
+        /* to trigger this transition by a simple hover, put your end state in
+            the element with a psuedo class as shown here:
+
+            #greeting:hover{
+                font-size: 100px;
+                color: #FF0000;
+            }
+
+            */
+
+        /* to do this using javascript adding a class with an event, you need
+            to place your end state in a compound CSS selector as below */
+        #greeting.new-state{
+            font-size: 100px;
+            color: #FF0000;
+        }

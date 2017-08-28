@@ -1,0 +1,19 @@
+#greeting {
+	position: absolute;
+	left: 100px;
+	top: 100px;
+	color: #0000FF;
+	font-size: 50px;
+	margin: 0;
+	padding: 10px;
+	border: 2px solid black;
+
+	transition-property: font-size;
+	transition-duration: 1s;
+	transition-timing-function: ease;
+	transition-delay: 250ms;
+}
+
+#greeting:hover{
+	font-size: 100px;
+}

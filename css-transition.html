@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>CSS Transitions</title>
+    <link rel="stylesheet" type="text/css" href="transitions.css">
+</head>
+<body>
+
+    <div id="back-link"><a href="index.html">Back</a></div>
+    
+    <h1 id="greeting">Hello!</h1>
+
+    <script type="text/javascript">
+        var elem = document.getElementById('greeting');
+    
+        elem.onclick = function (e) {elem.classList.toggle('new-state');}
+    </script>
+
+</body>
+</html>

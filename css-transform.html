@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>CSS Transform</title>
+    <style>
+
+        #back-link {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+
+        body {
+            /* these need to be on a parent element and help
+                keep a good look for the 3d transform */
+            transform:perspective(600px);
+            transform-style:preserve-3d;
+        }
+
+        #box{
+            position: relative;
+            top: 40px;
+            width: 500px;
+            height: 400px;
+            background-color: #afd3ef;
+            border: 3px solid #032e4f;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        /* the "all" keyword will perform the transition on all
+            props that are different between the original and the
+            end state
+
+            the props that are animating must be defined in the 
+            beginning and end states
+        */
+
+        #bird{
+            position: absolute;
+            left: 170px;
+            top: 90px;
+
+            transform:rotateX(0deg) rotateY(0deg); /* 3d rotate transform */
+            /* transform:rotate(45deg); /* simple 2d rotation */
+            /* transform-origin: 0% 50%;/* This rotates from a different origin. Does NOT need to be repeated below */
+            /* transform:scale(.2); /* Shrinks/enlarges the element */
+
+            transition: all 1s ease;
+        }
+
+        /* this trigger will affect the element inside the trigger element,
+            #box, when user hovers over #box 
+            
+            translate moves it on the x,y axes per the args passed
+
+            default value for translate is 0,0
+
+        */
+        #box:hover #bird{
+            transform:rotateX(0deg) rotateY(90deg);
+            /* transform:rotate(45deg);  */
+            /* transform:scale(1.5);  */
+        }
+    </style>
+</head>
+<body>
+<div id="back-link"><a href="index.html">Back</a></div>
+<div id="box">
+            <img id="bird" src='images/bird.png' />
+        </div>
+
+</body>
+</html>

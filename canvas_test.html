@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Canvas</title>
+    <style type="text/css">
+
+        .circle:hover {
+            animation: circle-motion 1s ease-out 3 normal both;
+        }
+
+        @keyframes circle-motion {
+            from {
+                transform: rotateY(0deg);
+            }
+            to {
+                transform: rotateY(360deg);
+            }
+        }
+
+    </style>
+
+</head>
+<body>
+    <h1>Canvas</h1>
+
+    <p>This is a red square:</p>
+    <canvas id="square" width="10" height="10"></canvas>
+
+    <p>This is a blue circle</p>
+
+    <ul class="nav-list">
+
+        <li><canvas class="circle" width="20" height="20"></canvas></li>
+        <li><canvas class="circle" width="20" height="20"></canvas></li>
+        <li><canvas class="circle" width="20" height="20"></canvas></li>
+        <li><canvas class="circle" width="20" height="20"></canvas></li>
+
+    </ul>
+
+<script>
+    var canvas = document.getElementById("square");
+    var context = canvas.getContext("2d");
+    context.fillStyle = "#f00";
+    context.fillRect(0, 0, 10, 10);
+
+    var canvas = document.getElementsByClassName("circle");
+    var context = canvas.getContext("2d");
+    context.beginPath();
+    context.arc(10,10,10,0,2*Math.PI, true);
+    context.fillStyle = "#00f";
+    context.fill();    
+
+
+</script>
+
+
+
+</body>
+</html>
